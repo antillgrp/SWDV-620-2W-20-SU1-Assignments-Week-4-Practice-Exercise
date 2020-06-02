@@ -1,35 +1,46 @@
-<!DOCTYPE html> 
-<html> 
-  
-<head> 
-    <title> 
-        Window prompt() Method 
-    </title> 
-</head> 
-  
-<body style="text-align: center;"> 
-    <h1 style="color:green;"> 
-        GeeksforGeeks 
-    </h1> 
-    <h2> 
-        Window prompt() Method 
-    </h2> 
-  
-    <button onclick="geek()"> 
-        Click me! 
-    </button> 
-    <p id="g"></p> 
-  
-    <script> 
-        function geek() { 
-            var doc = prompt("Please enter some text", 
-                "GeeksforGeeks"); 
-            if (doc != null) { 
-                document.getElementById("g").innerHTML = 
-                    "Welcome to " + doc; 
-            } 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Window prompt() Method
+    </title>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color:green;">
+        Authenticator
+    </h1>
+    <h2>
+        Window prompt() Method
+    </h2>
+
+    <button onclick="login()">
+        Sign In
+    </button>
+    <p id="u"></p>
+    <p id="p"></p>
+
+    <script>
+        function login() {
+            credentials = {
+                username: prompt(
+                    'User Name: ',
+                    "user name here"
+                ),
+                password: prompt(
+                    'User Name: ',
+                    "user name here"
+                )
+            };
+            if (credentials.username && credentials.password) {
+                document.getElementById("u").innerHTML =
+                    `👋   Welcome ${credentials.username}.`;
+                document.getElementById("u").innerHTML =
+                    `The password is: ${credentials.password}`;
+            }
         } 
-    </script> 
-</body> 
-  
-</html> 
+    </script>
+</body>
+
+</html>
