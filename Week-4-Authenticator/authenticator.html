@@ -50,7 +50,7 @@
                     `The password is: ${credentials.password}`;
             }
         }
-        function ValidationEvent() {           
+        function ValidationEvent() {
             credentials = {
                 username: document.getElementById("name").value,
                 password: document.getElementById("pass").value
@@ -60,8 +60,8 @@
                     `👋   Welcome ${credentials.username}.`;
                 document.getElementById("p").innerHTML =
                     `The password is: ${credentials.password}`;
-                return true;
-            }            
+                //return true;
+            }
             return false;
         }
     </script>
