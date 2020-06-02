@@ -1,0 +1,85 @@
+Provide a list of objects that can be used in Javascript and provide an example of each.
+
+Objects and properties
+
+A JavaScript object has properties associated with it. 
+A property of an object can be explained as a variable 
+that is attached to the object. Object properties are 
+basically the same as ordinary JavaScript variables, 
+except for the attachment to objects. The properties 
+of an object define the characteristics of the object. 
+You access the properties of an object with a simple 
+dot-notation:
+
+objectName.propertyName
+
+Like all JavaScript variables, both the object name 
+(which could be a normal variable) and property name 
+are case sensitive. You can define a property by assigning 
+it a value. For example, let's create an object named myCar 
+and give it properties named make, model, and year as follows:
+
+var myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+The above example could also be written using an object initializer, 
+which is a comma-delimited list of zero or more pairs of property 
+names and associated values of an object, enclosed in curly braces ({}):
+
+var myCar = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969
+};
+
+Unassigned properties of an object are undefined (and not null).
+
+myCar.color; // undefined
+
+Properties of JavaScript objects can also be accessed or set using 
+a bracket notation (for more details see property accessors). 
+Objects are sometimes called associative arrays, since each property 
+is associated with a string value that can be used to access it. So, 
+for example, you could access the properties of the myCar object as follows:
+
+myCar['make'] = 'Ford';
+myCar['model'] = 'Mustang';
+myCar['year'] = 1969;
+
+An object property name can be any valid JavaScript string, or anything that 
+can be converted to a string, including the empty string. However, any property 
+name that is not a valid JavaScript identifier (for example, a property name 
+that has a space or a hyphen, or that starts with a number) can only be accessed 
+using the square bracket notation. This notation is also very useful when 
+property names are to be dynamically determined (when the property name is not 
+determined until runtime).
+
+User-Defined Objects
+
+All user-defined objects and built-in objects are descendants of an object 
+called Object.
+
+The new Operator
+
+The new operator is used to create an instance of an object. To create an 
+object, the new operator is followed by the constructor method.
+
+In the following example, the constructor methods are Object(), Array(), 
+and Date(). These constructors are built-in JavaScript functions.
+
+var employee = new Object();
+var books = new Array("C++", "Perl", "Java");
+var day = new Date("August 15, 1947");
+
+The Object() Constructor
+
+A constructor is a function that creates and initializes an object. 
+JavaScript provides a special constructor function called Object() 
+to build the object. The return value of the Object() constructor 
+is assigned to a variable.
+
+The variable contains a reference to the new object. The properties 
+assigned to the object are not variables and are not defined with 
+the var keyword.

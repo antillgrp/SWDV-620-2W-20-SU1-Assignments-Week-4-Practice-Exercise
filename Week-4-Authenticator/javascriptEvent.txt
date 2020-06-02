@@ -1,0 +1,63 @@
+onsubmit event | submit event
+				
+Occurs on a form element when the user clicks on a submit button in the form.
+The onsubmit event is commonly used to validate the contents of form controls 
+and set the contents of some input:hidden elements before submitting. If the 
+user forgot to fill some required fields or made some other mistake on the form, 
+you can cancel the submission with the onsubmit event. 
+
+The event object is accessible to all event handlers in all browsers. The 
+properties of the event object contain additional information about the current event. 
+To get further details about these properties and the possible event handler 
+registration methods, please see the page for the event object.
+
+For a complete list of events, see the page for Events in JavaScript. 
+
+http://help.dottoro.com/larrqqck.php
+
+See the example below for details.
+
+<head>
+    <script type="text/javascript">
+        function CheckAndSubmit () {
+            var userName = document.getElementById ("userName");
+            if (userName.value.length < 3) {
+                alert ("The name of the user must be at least 3 characters long!");
+                return false;
+            }
+
+            var password = document.getElementById ("password");
+            var repassword = document.getElementById ("repassword");
+            if (password.value.length < 6) {
+                alert ("The password must be at least 6 characters long!");
+                return false;
+            }
+            if (repassword.value != password.value) {
+                alert ("The two passwords are different!");
+                return false;
+            }
+
+            var acceptAgreement = document.getElementById ("acceptAgreement");
+            if (!acceptAgreement.checked) {
+                alert ("You must accept the User Agreement to register!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form id="regForm" method="post" action="#URL#" onsubmit="return CheckAndSubmit ()">
+        User Name: <input type="text" name="userName" id="userName" />
+        <br />
+        Password: <input type="password" name="password" id="password" />
+        <br />
+        Repeat Password: <input type="password" name="repassword" id="repassword" />
+        <br /><br />
+        <input type="checkbox" name="acceptAgreement" id="acceptAgreement" /> 
+        <label for="acceptAgreement">I accept the User Agreement and Privacy Policy</label>
+        <br /><br />
+        <input type="submit" value="Register" />
+    </form>
+</body>
