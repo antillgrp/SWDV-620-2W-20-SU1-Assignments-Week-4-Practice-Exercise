@@ -1,0 +1,15 @@
+{
+  "name": "week-4-authenticator",
+  "version": "1.0.0",
+  "description": "script to prompt for a username and password",
+  "main": "authenticator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "username",
+    "password"
+  ],
+  "author": "Gerson Ramirez",
+  "license": "MIT"
+}
