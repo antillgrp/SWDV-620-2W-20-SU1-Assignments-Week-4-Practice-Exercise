@@ -14,4 +14,3 @@ To restart the MySQL server, use the following command:
 
 shell> sudo service mysql start
 
-https://ikasten.io/2017/01/08/whats-the-default-password-of-root-user-in-mariadb/
